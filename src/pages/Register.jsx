@@ -2,6 +2,7 @@ import React, { useContext, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { UserContext } from '../context/UserContext'
 import styled from 'styled-components'
+import Copyright from '../components/Copyright'
 
 const Container = styled.div`
    @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@400;500;600;700;800;900&display=swap');
@@ -15,6 +16,7 @@ const Container = styled.div`
    display: flex;
    justify-content: center;
    align-items: center;
+  overflow: hidden;
 `
 
 const LoginBox = styled.div`
@@ -213,6 +215,7 @@ const Register = () => {
                {errorMsg && <div className='errorMsg'>{errorMsg}</div>}
             </form>
          </LoginBox>
+         <Copyright/>
       </Container>
    )
 }
